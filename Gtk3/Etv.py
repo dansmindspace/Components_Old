@@ -2,7 +2,17 @@
 __app_name__    = 'Etv'
 __author__      = ['Dan Dahl']
 __version__     = 1.0
-__copyright__   = '© 2019'
+__copyright__   = 'GNU GPLv3'
+
+
+"""
+
+    TODO:
+    - Refactor JSON Template
+    - Simplify Row Color Implementation
+    - Add PyDoc Comments
+
+"""
 
 
 import gi
@@ -14,7 +24,10 @@ prev_text = ''
 
 class TreeView(Gtk.TreeView):
     '''Enhanced TreeView
-    Simply handles row bgcolor(Gdk.RGBA)
+    Simply handles row bgcolor(Gdk.RGBA) - Wip
+    Handles Cell based Context Menus - Finished
+    Handles Tool Tips for Text overflow/elipsisation - Mostly Finished
+    JSON template to describe columns - Wip
     '''
 
     def __init__(self, store=None, templates=None, *, tooltip_func=None):
